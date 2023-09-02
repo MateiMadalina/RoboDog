@@ -10,12 +10,8 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/")
 public class DogController {
- private final DogStorage dogStorage;
-
     @Autowired
-    public DogController(DogStorage dogStorage) {
-        this.dogStorage = dogStorage;
-    }
+    private DogStorage dogStorage;
 
     @GetMapping(value = "dogs")
     public List<Dog> displayAllDog(){
